@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloggy</title>
+    <link rel="stylesheet" href="/static/css/blogPage.css"/>
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar_brand">
+            <img class="navbar_logo" src="/static/logo.svg" alt="logo"/>Bloggy
+        </div>
+
+        <ul class="navbar__navigation">
+            <li class="navbar_navigation-item"><a href="#" class="navbar_link">Recent</a></li>
+            <li class="navbar_navigation-item"><a href="#" class="navbar_link">Calendar</a></li>
+        </ul>
+
+    </header>
+
+    <main class="main">
+        <section>
+            <h1>Add new entry</h1>
+            <form class="form" method="POST">
+                <p class="form_input">
+                    <textarea name="content" id="entry" class="form_textarea" aria-label="Entry contents"></textarea>
+                </p>
+                <button type="submit" class="form_submit">Add Entry</button>
+            </form>
+        </section>
+
+        <section>
+            <h1>Recent posts</h1>
+            {% for entry in entries|reverse %}
+            <article class="entry">
+                <div>
+                    <!-- truncate the first 30 characters of entry[0]-->
+                    <h2 class="entry_title">{{ entry[0] | truncate(30, true) }}</h2>
+                    <time class="entry_date" datetime="{{ entry[1] }}"> • {{ entry[2] }}</time>
+                </div>
+                <p class="entry_content">{{ entry[0] }}</p>
+            </article>
+            {% endfor %}
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer_content">
+            <section class="left">
+                <a class="footer_item">Made by Alya Campbell</a>
+                <a class="footer_item">Check out my other projects!</a>
+            </section>
+            <section class="right">
+                <div class="footer_column">
+                    <a class="footer_item">Recent</a>
+                    <a class="footer_item">Calendar</a>
+                </div>
+                <div class="footer_column">
+                    <a class="footer_item">About</a>
+                    <a class="footer_item">How This Was Made</a>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>
