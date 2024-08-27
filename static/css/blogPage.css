@@ -18,7 +18,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .navbar__brand{
@@ -69,7 +69,7 @@ body{
 
 .form_textarea{
     width: inherit;
-    font-size: 18px;
+    font-size: 12px;
     padding: 12px 20px;
     border: none;
     background-color: #f3f6f6;
@@ -80,7 +80,7 @@ body{
 .form_submit{
     background-color: #3cd0ff;
     border: none;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: bold;
     padding: 5px 30px;
     border-radius: 20px;
@@ -98,7 +98,7 @@ body{
 
 .entry_title{
     display:inline;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .entry_date{
@@ -106,14 +106,14 @@ body{
 }
 
 .entry_content{
-    font-size: 16px;
+    font-size: 14px;
     line-height: 150%;
 }
 
 .footer{
     background-color: #323f43;
     padding: 40px 0;
-    margin-top: 50px;
+    margin-top: 146px;
     border-top: 4px solid black;
     color: white;
     font-size: 12px;
